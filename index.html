@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dark mode</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body id="body">
+
+
+
+
+
+    <style>
+        .main-div {
+            width: 80px;
+            height: 40px;
+            background-color: black;
+            align-items: center;
+            padding: 7px;
+            border-radius: 50px;
+            
+        }
+
+        .button-div {
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            margin-top: 0;
+            border-radius: 100%;
+            transition: 1s ease;
+            
+
+        }
+
+        .button-div i { 
+            padding: 11px;
+            
+
+        }
+    </style>
+
+
+    <div class="main-div">
+        <div class="button-div" onclick="darkmodeactivate()">
+            <i id="icon" class="fa-solid fa-sun"></i>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+
+        var button = document.querySelector(".button-div")
+        var maindiv = document.querySelector(".main-div")
+        var body = document.getElementById("body")
+        var icon = document.getElementById("icon")
+        var darkMode = false;
+
+        function darkmodeactivate() {
+
+            if (darkMode) {
+
+                button.style.marginLeft = "0%";
+                button.style.backgroundColor = "white"
+                maindiv.style.backgroundColor = "black"
+                body.style.backgroundColor = "white"
+                body.style.transition = "1.5s"
+                icon.className = "fa-solid fa-sun"
+                button.style.color ="black"
+
+
+
+
+
+            }
+
+            else {
+
+                button.style.marginLeft = "50%";
+                button.style.backgroundColor = "black"
+                maindiv.style.backgroundColor = "white"
+                body.style.backgroundColor = "black"
+                body.style.transition = "1.5s"
+                icon.className = "fa-solid fa-moon"
+                button.style.color ="white"
+                icon.style.fontSize="20px"
+
+
+            }
+            darkMode = !darkMode;
+        }
+
+
+    </script>
+
+</body>
+
+</html>
